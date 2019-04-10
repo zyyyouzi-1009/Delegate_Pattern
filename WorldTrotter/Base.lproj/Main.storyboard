@@ -54,8 +54,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="6yZ-ra-pck"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OXV-CL-03R"/>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Rp8-1C-mpC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="80R-Kt-Ga7"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -80,7 +80,7 @@
                     </view>
                     <connections>
                         <outlet property="celsiusLabel" destination="XU5-kP-97a" id="d0M-9Z-nbJ"/>
-                        <outlet property="textField" destination="nEB-A3-sAJ" id="iRg-Dr-1hZ"/>
+                        <outlet property="textField" destination="nEB-A3-sAJ" id="Rex-iT-f5z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

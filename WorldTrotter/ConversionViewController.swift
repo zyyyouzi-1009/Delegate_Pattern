@@ -9,35 +9,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
-    var fahrenheitValue: Measurement<UnitTemperature>? {
-        didSet {
-            updateCelsiusLabel()
-        }
-    }
-    
-    var celsiusValue: Measurement<UnitTemperature>? {
-        if let fahrenheitValue = fahrenheitValue {
-            return fahrenheitValue.converted(to: .celsius)
-        } else {
-            return nil
-        }
-    }
-    
-    let numberFormatter: NumberFormatter = {
-        let nf = NumberFormatter()
-        nf.minimumFractionDigits = 0
-        nf.maximumFractionDigits = 1
-        return nf
-    }()
-    
-    func updateCelsiusLabel() {
-        if let celsiusValue = celsiusValue {
-            celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsiusValue.value))
-        } else {
-            celsiusLabel.text = "???"
-        }
-    }
-    
+    //ViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,5 +39,38 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             fahrenheitValue = nil
         }
     }
+    
+    //Data Properties
+    var fahrenheitValue: Measurement<UnitTemperature>? {
+        didSet { // this property observer will run after the property is assigned a value
+            updateCelsiusLabel()
+        }
+    }
+    
+    var celsiusValue: Measurement<UnitTemperature>? {
+        get{
+            if let fahrenheitValue = fahrenheitValue {
+                return fahrenheitValue.converted(to: .celsius)
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    // Helper Functions
+    func updateCelsiusLabel() {
+        if let celsiusValue = celsiusValue {
+            celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsiusValue.value))
+        } else {
+            celsiusLabel.text = "???"
+        }
+    }
+    
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
     
 }
