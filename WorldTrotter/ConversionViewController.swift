@@ -12,14 +12,14 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     //ViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateCelsiusLabel()
     }
-    
+    // Keyboard disappears when tapping the screen somewhere else
     @IBAction func dismissKeyboard(_ sender: AnyObject) {
         textField.resignFirstResponder()
     }
-    
+    // Review each character typed to decide to keep it (true) or not (false)
+    // TODO: Modify code to reject any letters in the replacement string
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
@@ -31,7 +31,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     }
-    
+    // Called when TextField is Changed (notice the optional binding)
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
         if let text = textField.text, let value = Double(text) {
             fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
@@ -39,14 +39,13 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             fahrenheitValue = nil
         }
     }
-    
-    //Data Properties
+    //Data Properties for Fahrenheit Temperature Measurement w/Observer
     var fahrenheitValue: Measurement<UnitTemperature>? {
         didSet { // this property observer will run after the property is assigned a value
             updateCelsiusLabel()
         }
     }
-    
+    //Data Property for Celsius Temperature Measurement w/Getter
     var celsiusValue: Measurement<UnitTemperature>? {
         get{
             if let fahrenheitValue = fahrenheitValue {
@@ -56,7 +55,6 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
     // Helper Functions
     func updateCelsiusLabel() {
         if let celsiusValue = celsiusValue {
@@ -65,7 +63,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             celsiusLabel.text = "???"
         }
     }
-    
+    // Limits the number of decimal places in the output label to 1
     let numberFormatter: NumberFormatter = {
         let nf = NumberFormatter()
         nf.minimumFractionDigits = 0
