@@ -4,8 +4,11 @@ struct Student{
     var firstName:String
     var lastName:String
     var studentID:String
-    var _password:String?
-    
+    var _password:String? {
+        didSet{
+            print("Your password was changed from \(oldValue) to \(_password!)")
+        }
+    }
     // Computed Properties
     var fullName:String { return "\(firstName) \(lastName)"}
     var password:String {
@@ -28,4 +31,4 @@ var Ian = Student(firstName: "Ian", lastName:"Bansenauer", studentID: "920111123
 print("Initial password: " + Ian.password)
 //Set Password
 Ian.password = "testPassword"
-print("Setting password to: " + Ian.password)
+Ian.password = "Fabul0_346"
