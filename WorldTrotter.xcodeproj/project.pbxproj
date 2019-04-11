@@ -47,6 +47,7 @@
 		6BB4AB631B7A5D4200967615 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		6BB4AB651B7A5D4200967615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB4AB711B7BD4C500967615 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		D1EF20E3225F0CAE0021B911 /* Get-Set-Struct-Properties.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Get-Set-Struct-Properties.playground"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		6BB4AB421B7A5D4200967615 /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
+				D1EF20E3225F0CAE0021B911 /* Get-Set-Struct-Properties.playground */,
 				6BB4AB431B7A5D4200967615 /* AppDelegate.swift */,
 				6BB4AB711B7BD4C500967615 /* ConversionViewController.swift */,
 				6BB4AB471B7A5D4200967615 /* Main.storyboard */,

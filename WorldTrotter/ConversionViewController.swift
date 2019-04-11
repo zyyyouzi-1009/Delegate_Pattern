@@ -3,8 +3,8 @@
 //
 
 import UIKit
-
-class ConversionViewController: UIViewController, UITextFieldDelegate {
+    // TODO: Mark the ViewController as conforming to the UITextFieldDelegate Protocol
+class ConversionViewController: UIViewController{ //, UITextFieldDelegate {
     
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
@@ -18,7 +18,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBAction func dismissKeyboard(_ sender: AnyObject) {
         textField.resignFirstResponder()
     }
-    // Review each character typed to decide to keep it (true) or not (false)
+    // DELEGATE METHOD : Review each character typed to decide to keep it (true) or not (false)
     // TODO: Modify code to reject any letters in the replacement string
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -39,20 +39,18 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             fahrenheitValue = nil
         }
     }
-    //Data Properties for Fahrenheit Temperature Measurement w/Observer
+    //Stored Properties for Fahrenheit Temperature Measurement w/Observer
     var fahrenheitValue: Measurement<UnitTemperature>? {
         didSet { // this property observer will run after the property is assigned a value
             updateCelsiusLabel()
         }
     }
-    //Data Property for Celsius Temperature Measurement w/Getter
+    //Computed Property for Celsius Temperature Measurement (Read only property - getter without setter)
     var celsiusValue: Measurement<UnitTemperature>? {
-        get{
-            if let fahrenheitValue = fahrenheitValue {
-                return fahrenheitValue.converted(to: .celsius)
-            } else {
-                return nil
-            }
+        if let fahrenheitValue = fahrenheitValue {
+            return fahrenheitValue.converted(to: .celsius)
+        } else {
+            return nil
         }
     }
     // Helper Functions
