@@ -11,8 +11,6 @@
 		6BB4AB491B7A5D4200967615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB4AB471B7A5D4200967615 /* Main.storyboard */; };
 		6BB4AB4B1B7A5D4200967615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BB4AB4A1B7A5D4200967615 /* Assets.xcassets */; };
 		6BB4AB4E1B7A5D4200967615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BB4AB4C1B7A5D4200967615 /* LaunchScreen.storyboard */; };
-		6BB4AB591B7A5D4200967615 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4AB581B7A5D4200967615 /* WorldTrotterTests.swift */; };
-		6BB4AB641B7A5D4200967615 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4AB631B7A5D4200967615 /* WorldTrotterUITests.swift */; };
 		6BB4AB721B7BD4C500967615 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4AB711B7BD4C500967615 /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,13 +39,8 @@
 		6BB4AB4D1B7A5D4200967615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BB4AB4F1B7A5D4200967615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB4AB541B7A5D4200967615 /* WorldTrotterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BB4AB581B7A5D4200967615 /* WorldTrotterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterTests.swift; sourceTree = "<group>"; };
-		6BB4AB5A1B7A5D4200967615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB4AB5F1B7A5D4200967615 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BB4AB631B7A5D4200967615 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
-		6BB4AB651B7A5D4200967615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB4AB711B7BD4C500967615 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
-		D1EF20E3225F0CAE0021B911 /* Get-Set-Struct-Properties.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Get-Set-Struct-Properties.playground"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				6BB4AB421B7A5D4200967615 /* WorldTrotter */,
-				6BB4AB571B7A5D4200967615 /* WorldTrotterTests */,
-				6BB4AB621B7A5D4200967615 /* WorldTrotterUITests */,
 				6BB4AB411B7A5D4200967615 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,7 +89,6 @@
 		6BB4AB421B7A5D4200967615 /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
-				D1EF20E3225F0CAE0021B911 /* Get-Set-Struct-Properties.playground */,
 				6BB4AB431B7A5D4200967615 /* AppDelegate.swift */,
 				6BB4AB711B7BD4C500967615 /* ConversionViewController.swift */,
 				6BB4AB471B7A5D4200967615 /* Main.storyboard */,
@@ -107,24 +97,6 @@
 				6BB4AB4F1B7A5D4200967615 /* Info.plist */,
 			);
 			path = WorldTrotter;
-			sourceTree = "<group>";
-		};
-		6BB4AB571B7A5D4200967615 /* WorldTrotterTests */ = {
-			isa = PBXGroup;
-			children = (
-				6BB4AB581B7A5D4200967615 /* WorldTrotterTests.swift */,
-				6BB4AB5A1B7A5D4200967615 /* Info.plist */,
-			);
-			path = WorldTrotterTests;
-			sourceTree = "<group>";
-		};
-		6BB4AB621B7A5D4200967615 /* WorldTrotterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6BB4AB631B7A5D4200967615 /* WorldTrotterUITests.swift */,
-				6BB4AB651B7A5D4200967615 /* Info.plist */,
-			);
-			path = WorldTrotterUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BB4AB591B7A5D4200967615 /* WorldTrotterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BB4AB641B7A5D4200967615 /* WorldTrotterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +398,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -442,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
